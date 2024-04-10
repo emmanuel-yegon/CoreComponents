@@ -1,11 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Button, Alert } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Button
+        title="Alert"
+        onPress={() => Alert.alert("Message", "Invalid data!")}
+      />
+      <Button
+        title="Alert 2"
+        onPress={() => Alert.alert("Invalid data!", "Incorrect DOB!")}
+      />
+      <Button
+        title="Alert 3"
+        onPress={() =>
+          Alert.alert("Invalid data!", "Incorrect DOB!", [
+            { text: "Cancel", onPress: () => console.log("Cancel pressed") },
+            { text: "OK", onPress: () => console.log("OK pressed") },
+          ])
+        }
+      />
     </View>
   );
 }
@@ -13,8 +27,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: 70,
+    backgroundColor: "",
   },
 });
