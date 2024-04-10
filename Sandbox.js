@@ -35,6 +35,24 @@ export default function Sandbox() {
         <ActivityIndicator size="large" />
         <ActivityIndicator size="large" color="midnightblue" />
       </View>
+
+      <Button
+        title="Alert"
+        onPress={() => Alert.alert("Message", "Invalid data!")}
+      />
+      <Button
+        title="Alert 2"
+        onPress={() => Alert.alert("Invalid data!", "Incorrect DOB!")}
+      />
+      <Button
+        title="Alert 3"
+        onPress={() =>
+          Alert.alert("Invalid data!", "Incorrect DOB!", [
+            { text: "Cancel", onPress: () => console.log("Cancel pressed") },
+            { text: "OK", onPress: () => console.log("OK pressed") },
+          ])
+        }
+      />
     </View>
   );
 }
