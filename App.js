@@ -1,5 +1,5 @@
-import RNSafeAreaView from "./components/rnLayout/RNSafeAreaView";
+import PokemonList from "./components/rnLists/PokemonList";
 
 export default function App() {
-  return <RNSafeAreaView />;
+  return <PokemonList />;
 }
