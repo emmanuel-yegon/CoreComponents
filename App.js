@@ -1,7 +1,10 @@
-import React, { useState } from "react";
-import RnTextInput from "./components/TextInput/RnTextInput";
-import Login from "./components/RnForms/Login";
+import React from "react";
+import { StyleSheet } from "react-native";
+
+import RnNetworking from "./components/RnNetworking/RnNetworking";
 
 export default function App() {
-  return <Login />;
+  return <RnNetworking />;
 }
+
+const styles = StyleSheet.create({});
